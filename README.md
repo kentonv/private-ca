@@ -6,6 +6,8 @@ You can use this to create a private CA key pair and then sign certificates with
 
 I wrote this because it is incredibly hard to find information on the internet on how to do this. OpenSSL's handling of extensions (needed to specify a wildcard) is confusing and documentation only seems to exist in the form of scattered incomplete guides and Stack Overflow answers.
 
+**This is for testing only. It has not been reviewed for security.**
+
 ## Usage
 
 Just type:
