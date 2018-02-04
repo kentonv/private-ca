@@ -10,15 +10,17 @@ I wrote this because it is incredibly hard to find information on the internet o
 
 ## Usage
 
-Just type:
+First, create your CA keypair:
+
+    make ca.crt
+
+This creates `ca.key` (CA private key) and `ca.crt` (CA certificate). Add `ca.crt` to your browser's trust store.
+
+Then, you can create a certificate for a particular host by typing:
 
     make HOSTNAME.crt
 
-Then follow the on-screen prompts. On first run, you'll be asked to fill in certificate info for the CA. On all runs, you'll then be asked to fill in info for the certificate you are creating.
-
-You'll end up with `HOSTNAME.key` and `HOSTNAME.crt` in PEM format, ready to load into your favorite server. You'll also get `ca.crt`, which you can add to your browser's trust store.
-
-The certificate will be a **wildcard certificate** good for both `HOSTNAME` itself and `*.HOSTNAME`.
+You'll end up with `HOSTNAME.key` and `HOSTNAME.crt` in PEM format, ready to load into your favorite server. The certificate will be a **wildcard certificate** good for both `HOSTNAME` itself and `*.HOSTNAME`.
 
 ## Advanced usage
 
